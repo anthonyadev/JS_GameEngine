@@ -1,0 +1,56 @@
+/********************/
+/* SET UP FILE BODY */
+/********************/
+html,body{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+
+    background: linear-gradient(-45deg, #333333 70%,#222222 100%);
+}
+
+#main-container{
+    width: calc(100% * (2/3));
+    padding: 0 10px;
+    /* background-color: #abafb1; */
+
+    display: flex;
+    flex-direction: column;
+}
+
+/****************/
+/* MAIN CONTENT */
+/****************/
+header{
+    width: 100%;
+    height: 75px;
+    /* border: 1px solid black; */
+    text-align: center;
+}
+
+main{
+    width: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+}
+
+footer{
+    width: 100%;
+    /* border: 1px solid black; */
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+}
+
+/***************/
+/* GAME CANVAS */
+/***************/
+canvas{
+    border: 1px solid black;
+    background-color: white;
+    margin: 10px 0;
+}
