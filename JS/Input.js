@@ -6,7 +6,7 @@ var mouseDown;
 var mouseUp;
 
 document.addEventListener('mousemove', (event) => {
-    mousePos = new Vector2(event.clientX - canvas.offsetLeft, event.clientY - canvas.offsetTop);
+    //mousePos = new Vector2(event.clientX - canvas.offsetLeft, event.clientY - canvas.offsetTop);
 });
 
 document.addEventListener('mousedown', (event) => {
@@ -19,6 +19,6 @@ document.addEventListener('mouseup', (event) => {
     mouseUp = true;
     mouseDown = false;
     lastClickedPos = mouseClickPos;
-    mouseClickPos = new Vector2(0, 0);
+   // mouseClickPos = new Vector2(0, 0);
 })
 

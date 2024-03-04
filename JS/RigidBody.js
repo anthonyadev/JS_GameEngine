@@ -10,8 +10,8 @@ class RigidBody{
     HandlePhysics(){
         this.velocity.Add(this.acceleration);
         //possible mass code .Multiply(new Vector2(1 / this.mass * 1.25, 1 / this.mass* 1.25)
-        this.acceleration = this.acceleration.Add(this.currentDrag)
-        this.velocity = this.velocity.Add(this.currentFriction)
+        this.acceleration = this.acceleration.Multiply(this.currentDrag)
+        this.velocity = this.velocity.Multiply(this.currentFriction)
     }
 
     AddForce(_force){

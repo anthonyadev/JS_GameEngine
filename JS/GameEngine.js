@@ -20,9 +20,8 @@ var shotforce;
 //Start Function
 window.addEventListener("load", (event) => {
     startTime = Date.now()
-    player.rigidBody.acceleration = new Vector2(10, 10)
+    player.rigidBody.acceleration = new Vector2(1, 1)
     sceneObjects.push(player);
-
 });
 
 function Update(){
@@ -34,30 +33,23 @@ function Update(){
 
     if(mouseDown)
     {
-       // console.log(mouseClickPos.Subtract(player.position).Normalize())
-        player.rigidBody.AddForce(mouseClickPos.Subtract(player.position.Normalize()).Normalize());
+        mouseClickPos = new Vector2(500, 500)
+       player.rigidBody.AddForce(mouseClickPos.Subtract(player.position).Normalize())
+      
     }
-
-
-   
     //LAST
-    
     Draw();
 }
 
 function Draw(){
    //ALWAYS DO FIRST//
    ctx.clearRect(0,0, canvas.clientWidth, canvas.clientHeight);
-
    //loop thru sceneObjects, draw them
-   for (let i = 0; i < sceneObjects.length; i++) {
+    for (let i = 0; i < sceneObjects.length; i++) {
         if(sceneObjects[i].isDrawable){sceneObjects[i].Draw()}
     }
     if(mousePos != null)
     line.Draw();
-
-
-
     ctx.font = "10px Arial";
     ctx.fillText("PLAYERPOS: " + player.position.x.toFixed(2) + " " + player.position.y.toFixed(2), 10, 40);
     ctx.fillText("MOUSEPOSITION: " + mousePos.x + " " + mousePos.y, 10, 60);
